@@ -1,0 +1,19 @@
+Feature Name,Business Label,Data Type,Unit,Null Count,Unique Values,Business Definition
+Zip,ZIP Code,int64,ZIP ID,0,6830,Five-digit ZIP code represented by the row. The identifier of this dataset.
+Month,Month,str,mm/dd/yyyy,0,2,The year and month associated with the observation.
+SampleSize,Household Sample Size,int64,Household Count,0,9626,Number of households represented in the ZIP code sample.
+State,State,str,State Code,0,51,Two-letter state abbreviation.
+City,Primary City,str,Categorical Text,2,3113,Primary city associated with the ZIP code.
+Metro,Metropolitan Area,str,Categorical Text,106,650,Metropolitan area associated with the ZIP code.
+RentIndex,Rent Index,float64,USD/Month,1185,12475,"Zillow Observed Rent Index for the ZIP code, representing typical monthly asking rent. Source: https://www.zillow.com/research/data/"
+AnnualMedianHouseholdIncome,Median Annual Household Income,int64,USD/Year,0,6628,Median annual income of households in the ZIP code.
+OwnerPercent,Homeowner Percentage,float64,Percent (%),0,5735,Percentage of households classified as homeowners.
+RenterPercent,Renter Household Percentage,float64,Percent (%),0,5736,Percentage of households classified as renters.
+MedianHomeLengthofResidence,Median Residence Tenure,float64,Years,0,28,Median number of years households have lived at their current residence.
+AvgNumberofChildren,Average Number of Children per Household,float64,Children/Household,0,103,Average number of children per household.
+AvgNumberofAdults,Average Number of Adults per Household,float64,Adults/Household,0,117,Average number of adults per household.
+AvgHouseholdSize,Average Household Size,float64,People/Household,0,183,Average number of people living in each household.
+AvgGenerationsinHousehold,Average Household Generations,float64,Generations/Household,0,95,Average number of generations living in each household.
+YoungAdultinHouseholdPercent,Young Adult Household Percentage,float64,Percent (%),0,1203,Percentage of households with at least one young adult.
+SeniorAdultinHouseholdPercent,Senior Adult Household Percentage,float64,Percent (%),0,1931,Percentage of households with at least one senior adult.
+AffordabilityPercentageTrue,Housing Affordability Percentage,int64,Percent (%) - Target Variable,0,101,Percentage of households whose housing costs are 30% or less of their income. The target variable.

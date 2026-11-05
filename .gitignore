@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Raw downloaded data
+data/raw/*
+!data/raw/.gitkeep
+
+# Conda environment (only if stored inside this repository)
+.conda/
