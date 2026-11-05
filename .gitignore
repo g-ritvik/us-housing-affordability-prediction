@@ -11,6 +11,7 @@ __pycache__/
 
 # KaggleHub metadata
 data/raw/.complete/
+data/raw/sample_submission.csv
 
 # Environment variables and credentials
 .env
