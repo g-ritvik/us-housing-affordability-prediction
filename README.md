@@ -9,7 +9,48 @@ us-housing-affordability-prediction/
 ├── README.md
 ├── requirements.txt
 │
-├── data/### 4. Download the Dataset
+├── data/
+│
+├── notebooks/
+│   └── 01_eda.ipynb
+│
+├── reports/
+│   ├── data_dictionary.csv
+│   └── figures/
+│       └── [EDA visualizations]
+│
+└── src/
+    └── data/
+        └── data_download.py
+```
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/g-ritvik/us-housing-affordability-prediction.git
+cd us-housing-affordability-prediction
+```
+
+### 2. Create and Activate a Conda Environment
+
+Create a Conda environment using Python 3.12:
+
+```bash
+conda create -n housing-afford python=3.12 -y
+conda activate housing-afford
+```
+
+### 3. Install Dependencies
+
+With the Conda environment activated, install the required packages:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### 4. Download the Dataset
 
 The dataset is hosted on Kaggle and requires authentication before downloading.
 
@@ -39,24 +80,6 @@ The downloaded files should be available under `data/raw/`:
 - `sample_submission.csv`
 
 **Security:** Never share your Kaggle API token or commit it to GitHub.
-
-**C. Accept the Competition Rules**
-
-Visit the [Kaggle competition page](https://www.kaggle.com/competitions/predicting-housing-affordability-in-the-u-s/overview) and accept the competition rules if prompted. Your Kaggle account must have access to the competition data.
-
-**D. Run the Download Script**
-
-From the repository root, execute:
-
-```bash
-python src/data/data_download.py
-```
-
-The downloaded files should be available under `data/raw/`:
-
-- `train.csv`
-- `test.csv`
-- `sample_submission.csv`
 
 ### 5. Run the EDA Notebook
 
