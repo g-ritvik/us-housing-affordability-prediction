@@ -3,3 +3,4 @@ ipykernel
 pandas
 seaborn
 matplotlib>=3.9.0
+notebook

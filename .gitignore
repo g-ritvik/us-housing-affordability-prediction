@@ -5,9 +5,13 @@ __pycache__/
 # Jupyter Notebook
 .ipynb_checkpoints/
 
-# Raw downloaded data
-data/raw/*
-!data/raw/.gitkeep
-
-# Conda environment (only if stored inside this repository)
+# Virtual environments
+.venv/
 .conda/
+
+# KaggleHub metadata
+data/raw/.complete/
+
+# Environment variables and credentials
+.env
+.env.*
