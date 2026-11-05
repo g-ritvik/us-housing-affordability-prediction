@@ -33,20 +33,40 @@ git clone https://github.com/g-ritvik/us-housing-affordability-prediction.git
 cd us-housing-affordability-prediction
 ```
 
-### 2. Create and Activate a Conda Environment
+### 2. Create and Activate a Virtual Environment
 
-Create a Conda environment using Python 3.12:
+This project uses Python's built-in `venv` module to manage dependencies. Python 3.12 is recommended.
 
-```bash
-conda create -n housing-afford python=3.12 -y
-conda activate housing-afford
+Create the virtual environment:
+
+```powershell
+py -3.12 -m venv .venv
 ```
+
+**A. Configure PowerShell Execution Policy (Windows)**
+
+If PowerShell prevents the virtual environment activation script from running, execute:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+This temporarily allows scripts to run in the current PowerShell session. It does not permanently change your system's execution policy.
+
+**B. Activate the Virtual Environment**
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Once activated, `(.venv)` should appear in your terminal prompt.
 
 ### 3. Install Dependencies
 
-With the Conda environment activated, install the required packages:
+With the virtual environment activated, install the required packages:
 
 ```bash
+python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
@@ -83,29 +103,26 @@ The downloaded files should be available under `data/raw/`:
 
 ### 5. Run the EDA Notebook
 
-Start Jupyter Notebook:
+Register the virtual environment as a Jupyter kernel:
+
+```powershell
+python -m ipykernel install --user --name housing-afford --display-name "Python (housing-afford)"
+```
+
+Start Jupyter Notebook from the repository root:
 
 ```bash
 jupyter notebook
 ```
 
-Open:
+Open `notebooks/01_eda.ipynb` and select **Python (housing-afford)** as the notebook kernel.
 
-`notebooks/01_eda.ipynb`
-
-Select the `housing-afford` Conda kernel if prompted, then run the notebook cells.
-
-If the environment is not available as a Jupyter kernel, install and register it:
-
-```bash
-python -m pip install ipykernel
-python -m ipykernel install --user --name housing-afford --display-name "Python (housing-afford)"
-```
+If the Jupyter Notebook command is unavailable, verify that `notebook` and `ipykernel` are included in `requirements.txt` and installed in the active virtual environment.
 
 ## Notes
 
 - Run commands from the repository root directory.
-- Activate the Conda environment before installing dependencies or running the notebook.
+- Activate the `.venv` environment before installing dependencies, downloading data, or running the notebook.
 - Raw CSV files are excluded from Git and must be downloaded locally.
-- The `.gitignore` excludes Python cache files, Jupyter checkpoints, and downloaded raw data.
+- The `.gitignore` excludes Python cache files, Jupyter checkpoints, the virtual environment, and downloaded raw data.
 - Never share your Kaggle API token or commit it to the repository.
