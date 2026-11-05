@@ -70,36 +70,23 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-### 4. Download the Dataset
+## 4. Dataset
 
-The dataset is hosted on Kaggle and requires authentication before downloading.
+The competition dataset is included in the repository under `data/raw/`.
 
-**A. Generate a Kaggle API Token**
-
-1. Create or sign in to your Kaggle account.
-2. Visit [Kaggle API Settings](https://www.kaggle.com/settings/api).
-3. Under **API Tokens**, select **Generate New Token**.
-4. Copy the generated API token.
-
-**B. Download the Dataset**
-
-From the repository root, run:
-
-```bash
-python src/data/data_download.py
-```
-
-When prompted, paste your Kaggle API token. The script will authenticate with KaggleHub and download the competition dataset.
-
-If prompted, visit the [Kaggle competition page](https://www.kaggle.com/competitions/predicting-housing-affordability-in-the-u-s/overview) and accept the competition rules before downloading.
-
-The downloaded files should be available under `data/raw/`:
+The following files are already available:
 
 - `train.csv`
 - `test.csv`
 - `sample_submission.csv`
 
-**Security:** Never share your Kaggle API token or commit it to GitHub.
+No Kaggle authentication or additional download is required.
+
+If you want to download the dataset again, you can optionally run:
+
+```powershell
+python src/data/data_download.py
+```
 
 ### 5. Run the EDA Notebook
 
@@ -123,6 +110,6 @@ If the Jupyter Notebook command is unavailable, verify that `notebook` and `ipyk
 
 - Run commands from the repository root directory.
 - Activate the `.venv` environment before installing dependencies, downloading data, or running the notebook.
-- Raw CSV files are excluded from Git and must be downloaded locally.
+- The raw competition CSV files are included in the repository under `data/raw/`.
 - The `.gitignore` excludes Python cache files, Jupyter checkpoints, the virtual environment, and downloaded raw data.
 - Never share your Kaggle API token or commit it to the repository.
