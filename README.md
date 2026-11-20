@@ -12,8 +12,9 @@ The project explores geographic, demographic, economic, and housing-related char
 housing_affordability_US/
 │
 ├── .gitignore
-├── Business.md
 ├── README.md
+├── Report.pdf
+├── Report.html
 ├── requirements.txt
 │
 ├── artifacts/
@@ -65,7 +66,7 @@ housing_affordability_US/
 
 ```bash
 git clone https://github.com/g-ritvik/us-housing-affordability-prediction.git
-cd housing_affordability_US
+cd us-housing-affordability-prediction
 ```
 
 ### 2. Create and Activate a Virtual Environment
