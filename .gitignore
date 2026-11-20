@@ -1,18 +1,47 @@
-# Python
+
+# Python cache files
 __pycache__/
 *.py[cod]
+*$py.class
 
-# Jupyter Notebook
+# Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
 # Virtual environments
 .venv/
-.conda/
+venv/
+env/
 
-# KaggleHub metadata
-data/raw/.complete/
-data/raw/sample_submission.csv
-
-# Environment variables and credentials
+# Environment variables and secrets
 .env
 .env.*
+!.env.example
+
+# Local editor settings
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Kaggle download metadata
+data/raw/.complete/
+# Ignore cleaned/generated datasets
+data/clean/
+
+# Kaggle credentials
+kaggle.json
+
+# Local test and development outputs
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# md
+/Business.md

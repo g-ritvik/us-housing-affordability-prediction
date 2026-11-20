@@ -1,6 +1,10 @@
 kagglehub
 ipykernel
 pandas
-seaborn
+numpy
 matplotlib>=3.9.0
+seaborn
 notebook
+scikit-learn
+joblib
+rich==15.0.0
