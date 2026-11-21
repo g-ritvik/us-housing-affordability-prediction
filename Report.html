@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Business.md</title>
+<title>Report.md</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
 <style>
@@ -431,8 +431,9 @@ code {
 <li><a href="#73-new-zip-evaluation">7.3 New ZIP Evaluation</a></li>
 <li><a href="#74-seen-zip-evaluation">7.4 Seen ZIP Evaluation</a></li>
 <li><a href="#75-competition-weighted-estimate">7.5 Competition-Weighted Estimate</a></li>
-<li><a href="#76-interpretation-of-findings">7.6 Interpretation of Findings</a></li>
-<li><a href="#77-evaluation-caveats">7.7 Evaluation Caveats</a></li>
+<li><a href="#76-official-kaggle-competition-results">7.6 Official Kaggle Competition Results</a></li>
+<li><a href="#77-interpretation-of-findings">7.7 Interpretation of Findings</a></li>
+<li><a href="#78-evaluation-caveats">7.8 Evaluation Caveats</a></li>
 </ul>
 </li>
 <li><a href="#8-advanced-component-and-reproducibility">Advanced Component and Reproducibility</a>
@@ -1000,7 +1001,32 @@ c-4-3.333-8.333-7.667-13 -13l-13-13l77-155 77-156c66 199.333 139 419.667
 </tbody>
 </table>
 <p>This is an internal validation estimate, not the official Kaggle score, which is based on July observations.</p>
-<h2 id="76-interpretation-of-findings">7.6 Interpretation of Findings</h2>
+<h2 id="76-official-kaggle-competition-results">7.6 Official Kaggle Competition Results</h2>
+<p>After completing local model evaluation, the final Ridge Regression predictions were submitted to the Kaggle competition for external evaluation.</p>
+<p>The submission, <code>test_predictions.csv</code>, received the following leaderboard scores:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Evaluation</th>
+<th style="text-align:right">Kaggle RMSE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Public leaderboard</td>
+<td style="text-align:right"><strong>13.600</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">Private leaderboard</td>
+<td style="text-align:right"><strong>14.398</strong></td>
+</tr>
+</tbody>
+</table>
+<p><img src="reports/figures/kaggle_submission_results.png" alt="Kaggle competition submission results"></p>
+<p><em>Figure 11. Official Kaggle leaderboard results for the Ridge Regression submission.</em></p>
+<p>The public leaderboard score reflects performance on the public portion of the competition test data, while the private leaderboard score reflects performance on the remaining held-out portion.</p>
+<p>The private leaderboard RMSE of <strong>14.398</strong> provides the final competition evaluation result for this submission. These scores are separate from the locally calculated cross-validation results and offer an additional assessment of the model's predictive performance on unseen competition data.</p>
+<h2 id="77-interpretation-of-findings">7.7 Interpretation of Findings</h2>
 <p>The results highlight three key findings:</p>
 <ul>
 <li><strong>Predictive value:</strong> Combining household and geographic characteristics produced useful affordability estimates.</li>
@@ -1008,7 +1034,7 @@ c-4-3.333-8.333-7.667-13 -13l-13-13l77-155 77-156c66 199.333 139 419.667
 <li><strong>Prediction range:</strong> Clipping improved RMSE in both evaluation scenarios and kept predictions within the valid 0–100% range.</li>
 </ul>
 <p>Overall, the model may support regional screening and further housing research. However, its predictions do not establish causal relationships or provide sufficient evidence for individual household decisions.</p>
-<h2 id="77-evaluation-caveats">7.7 Evaluation Caveats</h2>
+<h2 id="78-evaluation-caveats">7.8 Evaluation Caveats</h2>
 <p>The same grouped cross-validation folds were used for feature selection, tuning, and model comparison. This may make the final performance estimate somewhat optimistic.</p>
 <p>Additionally, the Seen ZIP evaluation covers only May to June 2026. Performance across longer periods or changing housing markets remains untested.</p>
 <hr>
