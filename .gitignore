@@ -30,11 +30,16 @@ desktop.ini
 *.tmp
 *.bak
 
-# Kaggle download metadata
-data/raw/.complete/
-data/raw/sample_submission.csv
-# Ignore cleaned/generated datasets
+# Kaggle competition data
+data/raw/
 data/clean/
+
+# Generated model artifacts and predictions
+artifacts/
+reports/test_predictions.csv
+
+# Kaggle credentials
+kaggle.json
 
 # Kaggle credentials
 kaggle.json
