@@ -114,6 +114,8 @@ def predict_kaggle_test(model):
         style="green",
     )
 
+    predictions_df.to_csv(OUTPUT_PATH, index=False)
+
     print_table(
         "Prediction Summary",
         ["Property", "Value"],
@@ -124,6 +126,10 @@ def predict_kaggle_test(model):
             ("Clipping Percentage", f"{clipped_count / len(predictions) * 100:.2f}%"),
             ("Predictions Saved To", str(OUTPUT_PATH)),
         ],
+    )
+
+    console.print(
+        f"\n[bold green]Predictions saved to:[/bold green] {OUTPUT_PATH.resolve()}"
     )
 
 
