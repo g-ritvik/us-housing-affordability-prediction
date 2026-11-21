@@ -73,27 +73,47 @@ cd us-housing-affordability-prediction
 
 This project uses Python's built-in `venv` module to manage dependencies. Python 3.12 is recommended.
 
-Create the virtual environment:
+**A. Create the Virtual Environment**
+
+Windows (PowerShell):
 
 ```powershell
 py -3.12 -m venv .venv
 ```
 
-**A. Configure PowerShell Execution Policy (Windows)**
+macOS / Linux:
 
-If PowerShell prevents the virtual environment activation script from running, execute:
+```bash
+python3.12 -m venv .venv
+```
+
+**B. Activate the Virtual Environment**
+
+Windows (PowerShell):
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Windows (Command Prompt):
+
+```cmd
+.venv\Scripts\activate.bat
+```
+
+macOS / Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+**Windows PowerShell note:** If PowerShell prevents the activation script from running, execute:
 
 ```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
 
 This temporarily allows scripts to run in the current PowerShell session. It does not permanently change your system's execution policy.
-
-**B. Activate the Virtual Environment**
-
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
 
 Once activated, `(.venv)` should appear in your terminal prompt.
 
